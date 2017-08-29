@@ -31,10 +31,8 @@ public:
 	void Fire();
 
 protected:
-	UTankAimingComponent* TankAimingComponent = nullptr;
-
 	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent* TankMovementComponent = nullptr;
+	UTankAimingComponent* TankAimingComponent = nullptr;
 
 private:
 	// Sets default values for this pawn's properties
