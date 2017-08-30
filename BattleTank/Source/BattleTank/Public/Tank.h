@@ -18,9 +18,6 @@ class BATTLETANK_API ATank : public APawn
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	void Initialise(UTankAimingComponent* AimingComponentToSet, UTankBarrel* BarrelToSet, UTankTurret * TurretToSet);
-
 	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = "Firing")
@@ -40,6 +37,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
+	// TODO remove once firing is moved to aiming component
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 8000;
 
