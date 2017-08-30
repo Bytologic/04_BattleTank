@@ -7,7 +7,7 @@
 #include "TankAIController.generated.h"
 
 // Forward Declarations
-class ATank;
+class UTankAimingComponent;
 
 /**
  * 
@@ -24,4 +24,6 @@ private:
 
 	// How close can the AI tanks get
 	float AcceptanceRadius = 3000;
+
+	UTankAimingComponent* AimingComponent = nullptr;
 };
