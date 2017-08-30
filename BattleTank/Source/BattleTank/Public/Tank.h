@@ -28,7 +28,8 @@ public:
 	void Fire();
 
 protected:
-	
+	UPROPERTY(BlueprintReadOnly)
+	UTankAimingComponent* TankAimingComponent = nullptr;
 
 private:
 	// Sets default values for this pawn's properties
@@ -48,8 +49,6 @@ private:
 
 	//Local barrel reference for spawning projectile
 	UTankBarrel* Barrel = nullptr; // TODO Remove
-
-	UTankAimingComponent* TankAimingComponent = nullptr;
 
 	double LastFireTime = 0;
 };
