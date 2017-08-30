@@ -15,7 +15,7 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = false;
 
 	auto TankName = GetName();
-	UE_LOG(LogTemp, Warning, TEXT("[&s] DONKEY: Tank.cpp Constructed"), *TankName);
+	UE_LOG(LogTemp, Warning, TEXT("[&s] DONKEY: Tank C++ Constructed"), *TankName);
 }
 
 void ATank::Initialise(UTankAimingComponent* AimingComponentToSet, UTankBarrel* BarrelToSet, UTankTurret * TurretToSet)
@@ -30,7 +30,7 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay(); // Needed for BP Begin Play to run!
 
-	UE_LOG(LogTemp, Warning, TEXT("DONKEY: Tank.cpp BeginPlay"));
+	UE_LOG(LogTemp, Warning, TEXT("DONKEY: Tank C++ BeginPlay"));
 }
 
 void ATank::AimAt(FVector HitLocation)
