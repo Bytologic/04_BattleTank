@@ -1,4 +1,4 @@
-// Copyright Chiel Smit 2017
+// Copyright EmbraceIT Ltd.
 
 using UnrealBuildTool;
 using System.Collections.Generic;
