@@ -81,12 +81,11 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 
 void UTankAimingComponent::Fire()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Firing!"));
 	if (FiringState != EFiringState::Reloading)
 	{
 		// Spawn a projectile at socket location on barrel
 		if (!ensure(Barrel)) { return; }
-		if (!ensure(ProjectileBlueprint)) { UE_LOG(LogTemp, Warning, TEXT("Nope nvm k bai")); return; }
+		if (!ensure(ProjectileBlueprint)) { return; }
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
 			ProjectileBlueprint,
 			Barrel->GetSocketLocation(FName("Projectile")),
